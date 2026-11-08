@@ -1,11 +1,11 @@
 let board = document.getElementById("sudoku");
-
+//AI Generated, Model: Gemini 3.1 Pro
 let puzzles = [
     "EC--G----F--AIE----IH----F-H---F---CD--H-C--AG---B---F-F----BH----DAI--E----H--GI",
     "H---F---CD--H-C--AG---B---F-F----BH----DAI--E----H--GIEC--G----F--AIE----IH----F-",
     "-F----BH----DAI--E----H--GIEC--G----F--AIE----IH----F-H---F---CD--H-C--AG---B---"
 ];
-
+//AI Generated, Model: Gemini 3.1 Pro
 let solutions = [
     "ECDFGHIABFGBIAECDHAIHCDBEFGHEIGFADBCDBFHECGIGACIBDHEFIFAECGBHDBHGDAIFCECDEBHFAGI",
     "HEIGFADBCDBFHECGIGACIBDHEFIFAECGBHDBHGDAIFCECDEBHFAGIECDFGHIABFGBIAECDHAIHCDBEFG",
