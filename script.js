@@ -6,8 +6,17 @@ let puzzles = [
     "-F----BH----DAI--E----H--GIEC--G----F--AIE----IH----F-H---F---CD--H-C--AG---B---"
 ];
 
+let solutions = [
+    "ECDFGHIABFGBIAECDHAIHCDBEFGHEIGFADBCDBFHECGIGACIBDHEFIFAECGBHDBHGDAIFCECDEBHFAGI",
+    "HEIGFADBCDBFHECGIGACIBDHEFIFAECGBHDBHGDAIFCECDEBHFAGIECDFGHIABFGBIAECDHAIHCDBEFG",
+    "FIFAECGBHDBHGDAIFCECDEBHFAGIECDFGHIABFGBIAECDHAIHCDBEFGHEIGFADBCDBFHECGIGACIBDHE"
+];
+
 let r = Math.floor(Math.random() * 3);
 let puzzle = puzzles[r];
+let solution = solutions[r];
+
+let inputs = [];
 
 for (let i = 0; i < 81; i++) {
     let cell = document.createElement("input");
@@ -29,9 +38,24 @@ for (let i = 0; i < 81; i++) {
     };
 
     board.appendChild(cell);
+    inputs.push(cell);
 
     if ((i + 1) % 9 === 0) {
         let br = document.createElement("br");
         board.appendChild(br);
+    }
+}
+
+function check() {
+    let win = true;
+    for (let i = 0; i < 81; i++) {
+        if (inputs[i].value !== solution[i]) {
+            win = false;
+        }
+    }
+    if (win) {
+        alert("Sudoku je spravne!");
+    } else {
+        alert("Nekde je chyba.");
     }
 }
